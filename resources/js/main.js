@@ -16,14 +16,42 @@ const showMenu = (headerToggle, navbarId) =>{
 showMenu('header-toggle','navbar')
 
 /*==================== LINK ACTIVE ====================*/
-document.addEventListener("DOMContentLoaded", function () {
-    const mainMenus = document.querySelectorAll('.main-menu');
-    const submenus = document.querySelectorAll('.nav__submenu');
+const dropdowns = document.querySelectorAll('.nav__dropdown');
 
-    mainMenus.forEach((mainMenu, index) => {
-        mainMenu.addEventListener("click", function (event) {
-            event.preventDefault();
-            submenus[index].classList.toggle("show-submenu");
-        });
-    });
+// Close the dropdown content when a click occurs outside of it
+document.addEventListener('click', function (event) {
+  dropdowns.forEach((dropdown) => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove('active');
+      const icon = dropdown.querySelector('.nav__dropdown-icon');
+      if (icon) {
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  });
 });
+
+// Toggle the dropdown when clicked on a .nav__dropdown
+dropdowns.forEach((dropdown) => {
+  dropdown.addEventListener('click', function (event) {
+    const isActive = dropdown.classList.contains('active');
+    dropdowns.forEach((otherDropdown) => {
+      otherDropdown.classList.remove('active');
+      const otherIcon = otherDropdown.querySelector('.nav__dropdown-icon');
+      if (otherIcon) {
+        otherIcon.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    dropdown.classList.toggle('active');
+    const icon = dropdown.querySelector('.nav__dropdown-icon');
+    if (icon) {
+      icon.style.transform = isActive ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+
+    // Prevent the click event from propagating to the document click handler
+    event.stopPropagation();
+  });
+});
+
+

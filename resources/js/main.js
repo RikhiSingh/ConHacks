@@ -16,11 +16,14 @@ const showMenu = (headerToggle, navbarId) =>{
 showMenu('header-toggle','navbar')
 
 /*==================== LINK ACTIVE ====================*/
-const linkColor = document.querySelectorAll('.nav__link')
+document.addEventListener("DOMContentLoaded", function () {
+    const mainMenus = document.querySelectorAll('.main-menu');
+    const submenus = document.querySelectorAll('.nav__submenu');
 
-function colorLink(){
-    linkColor.forEach(l => l.classList.remove('active'))
-    this.classList.add('active')
-}
-
-linkColor.forEach(l => l.addEventListener('click', colorLink))
+    mainMenus.forEach((mainMenu, index) => {
+        mainMenu.addEventListener("click", function (event) {
+            event.preventDefault();
+            submenus[index].classList.toggle("show-submenu");
+        });
+    });
+});

@@ -33,4 +33,3 @@ npm install
 Give credit to authors, contributors, or any third-party resources or tools used.
 Could you mention inspirations or resources that were helpful?
 ## License
-https://www.youtube.com/watch?v=eKo1NV1qxbc&ab_channel=HowToCodeSchool

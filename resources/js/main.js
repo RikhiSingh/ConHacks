@@ -53,5 +53,3 @@ dropdowns.forEach((dropdown) => {
     event.stopPropagation();
   });
 });
-
-

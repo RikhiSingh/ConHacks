@@ -15,6 +15,7 @@
   --body-color: #e9eae9;
   --container-color: #000000;
   --icon-color: #FFFFFF;
+  --border-bottom: #D3D3D3
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -224,6 +225,51 @@ img {
 .nav__dropdown-item:hover {
   color: var(--first-color);
 }
+
+
+
+/* Home */
+.profile__home{
+  color: var(--first-color);
+  border-bottom: 1px solid #d3d3d3;
+}
+
+/* footer */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  position: fixed;
+  clear: both;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: normal;
+  font-variant: normal;
+  text-align: center;
+  padding: 10px 0;
+  display: flex; 
+  justify-content: space-between; 
+}
+
+#footer-copyright-section {
+  text-align: right;
+}
+
+#footer-copyright {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 90%; 
+  text-align: center; 
+}
+
+#footer-version-section {
+  float: none;
+  padding-top: 5px;
+  margin: 0px 9px 0px 0px;
+}
+
+
 
 .nav__dropdown-icon {
   margin-left: auto;

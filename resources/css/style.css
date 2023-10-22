@@ -248,6 +248,53 @@ img {
   border-bottom: 1px solid #d3d3d3;
 }
 
+/* One Card */
+.onecard__heading{
+  margin: 2rem 1.5rem;
+}
+
+.onecard__image{
+  width: 180px;
+  margin-left: 1.5rem;
+  box-shadow: 2px 10px 20px -10px;
+}
+
+.onecard__image__container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 43%;
+}
+
+.image__info__container{
+  width: 20rem;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 2px 10px 20px -10px;
+}
+
+.image__info{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.image__info__heading{
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.image__info .info__type,
+.image__info .info__status{
+  display: flex;
+  flex-direction: column;
+}
+
+.image__info__text{
+  margin: 1.1rem;
+}
+
 /* footer */
 footer {
   background-color: #000000;

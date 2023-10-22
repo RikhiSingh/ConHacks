@@ -191,6 +191,9 @@ img {
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   white-space: nowrap;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav__logout {

@@ -240,12 +240,11 @@ img {
   color: var(--first-color);
 }
 
-
-
 /* Home */
 .profile__home{
   color: var(--first-color);
   border-bottom: 1px solid #d3d3d3;
+  margin-bottom: 1.6rem;
 }
 
 /* One Card */
@@ -263,7 +262,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 43%;
+  width: 570px;
 }
 
 .image__info__container{
@@ -293,6 +292,16 @@ img {
 
 .image__info__text{
   margin: 1.1rem;
+}
+
+/* Calander */
+.select{
+  padding: 0.1rem 0.2rem;
+  margin-left: 0.5rem;
+}
+
+.select option{
+  line-height: 1.3;
 }
 
 /* footer */
@@ -427,4 +436,12 @@ footer {
   .nav:hover .nav__dropdown-icon {
     opacity: 1;
   }
+}
+
+@media screen and (max-width:600px) {
+    /* One Card */
+    .onecard__image__container{
+      flex-direction: column;
+      height: 570px;
+    }
 }

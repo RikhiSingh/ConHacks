@@ -3,12 +3,9 @@ const showMenu = (headerToggle, navbarId) =>{
     const toggleBtn = document.getElementById(headerToggle),
     nav = document.getElementById(navbarId)
     
-    // Validate that variables exist
     if(headerToggle && navbarId){
         toggleBtn.addEventListener('click', ()=>{
-            // We add the show-menu class to the div tag with the nav__menu class
             nav.classList.toggle('show-menu')
-            // change icon
             toggleBtn.classList.toggle('bx-x')
         })
     }
@@ -17,8 +14,6 @@ showMenu('header-toggle','navbar')
 
 /*==================== LINK ACTIVE ====================*/
 const dropdowns = document.querySelectorAll('.nav__dropdown');
-
-// Close the dropdown content when a click occurs outside of it
 document.addEventListener('click', function (event) {
   dropdowns.forEach((dropdown) => {
     if (!dropdown.contains(event.target)) {
@@ -31,7 +26,6 @@ document.addEventListener('click', function (event) {
   });
 });
 
-// Toggle the dropdown when clicked on a .nav__dropdown
 dropdowns.forEach((dropdown) => {
   dropdown.addEventListener('click', function (event) {
     const isActive = dropdown.classList.contains('active');
@@ -48,10 +42,6 @@ dropdowns.forEach((dropdown) => {
     if (icon) {
       icon.style.transform = isActive ? 'rotate(0deg)' : 'rotate(180deg)';
     }
-
-    // Prevent the click event from propagating to the document click handler
     event.stopPropagation();
   });
 });
-
-
